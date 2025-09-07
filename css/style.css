@@ -1,0 +1,1241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #f9fafb;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  height: 100vh;
+  background-color: #2563eb;
+}
+
+.navbar {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(30, 64, 175, 0.6);
+  position: fixed;
+  z-index: 200;
+}
+
+.navbar .left-part {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.navbar .left-part img {
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.navbar input {
+  height: 30px;
+  width: 250px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(45%, -50%);
+  text-indent: 10px;
+}
+
+.navbar input:focus {
+  border: 2px solid #2563eb;
+}
+
+.navbar .right-part {
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+
+.navbar .right-part ul {
+  list-style: none;
+  background-color: #2563eb;
+  overflow: visible;
+}
+
+.right-part ul li {
+  float: left;
+  height: 40px;
+  width: 12.5%;
+  text-align: center;
+  position: relative;
+}
+
+.right-part .dropdown-content {
+  display: none;
+  list-style: none;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.cs-hov:hover .dropdown-content {
+  display: block;
+}
+
+.cs-hov .dropdown-arrow {
+  margin-right: 7px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+}
+
+.right-part .dropdown-content li {
+  float: none;
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.right-part li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: #10b981;
+  transition: 0.5s;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+/* End Of Navbar */
+
+.content-header {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/92980.jpg");
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.content-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.content-header h3 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.content-header p {
+  width: 100%;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, 56%);
+  color: #e0e7ff;
+  font-size: large;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.buttons {
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  color: white;
+  font-size: large;
+  z-index: 2;
+}
+
+.buttons .btn-header {
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: medium;
+  color: white;
+}
+
+.buttons .get-started {
+  background-color: rgb(37, 99, 235, 1);
+  transition: 0.5s;
+}
+
+.buttons .get-started:hover {
+  background-color: rgb(37, 99, 235, 0.5);
+}
+
+.buttons .learn-more-1 {
+  background-color: rgb(16, 185, 129, 1);
+  transition: 0.5s;
+}
+
+.buttons .learn-more-1:hover {
+  background-color: rgb(16, 185, 129, 0.5);
+}
+
+/* End of Header & Navbar */
+
+.welcome-team .welcome-caption {
+  text-align: center;
+  color: black;
+  height: 200px;
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 200px;
+  position: relative;
+}
+
+.welcome-team .welcome-caption::after {
+  background-color: rgb(54, 63, 199);
+  width: 150px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  z-index: -5;
+}
+
+.welcome-teams {
+  overflow: auto;
+}
+
+.item-team {
+  float: left;
+  width: 30%;
+  color: blue;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px 0;
+
+  position: relative;
+}
+
+.item-two {
+  margin: 0 5%;
+}
+
+.icon-team i {
+  font-size: 40px;
+  color: rgb(84, 81, 247);
+  margin-bottom: 20px;
+}
+
+.item-team h3 {
+  color: black;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.item-team p {
+  color: black;
+  font-size: large;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.item-team a {
+  text-decoration: none;
+  color: blue;
+  font-size: large;
+  text-transform: capitalize;
+}
+
+.item-team::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgb(84, 81, 247);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  transition: 0.8s;
+  z-index: -1;
+}
+
+.item-team:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.item-team:hover h3,
+.item-team:hover p {
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* End of Welcome Team Section */
+
+.our-courses {
+  background-color: rgb(37, 99, 235, 0.3);
+  margin-top: 100px;
+  padding-bottom: 150px;
+}
+
+.courses-caption {
+  text-align: center;
+  color: #fff;
+  height: 200px;
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 200px;
+  position: relative;
+}
+
+.courses-caption::after {
+  background-color: rgb(54, 63, 199);
+  width: 150px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  z-index: 1;
+}
+
+.parent-courses {
+  overflow: auto;
+}
+
+.course-item {
+  float: left;
+  width: 30%;
+  height: 250px;
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.item-2,
+.item-5 {
+  margin: 0 5%;
+}
+
+.course-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.course-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content h3 {
+  font-size: 27px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.overlay-content p {
+  /* font-size: 15px; */
+  text-transform: uppercase;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.overlay-content .favi-icons i {
+  color: white;
+  background-color: brown;
+  padding: 5px;
+  font-size: x-large;
+  border-radius: 5px;
+  margin: 2.5px;
+}
+
+/*  End of Types of Courses */
+
+.offers .offers-caption {
+  text-align: center;
+  color: black;
+
+  height: 200px;
+  font-size: 40px;
+
+  text-transform: capitalize;
+  line-height: 200px;
+
+  position: relative;
+}
+
+.offers .offers-caption::after {
+  background-color: rgb(54, 63, 199);
+  width: 150px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  z-index: -5;
+}
+
+.offers {
+  margin-bottom: 150px;
+}
+
+.welcome-offers {
+  overflow: auto;
+}
+
+.item-offer {
+  float: left;
+  width: 30%;
+  height: 200px;
+  color: blue;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px 10px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.offer-two,
+.offer-five {
+  margin: 0 5%;
+}
+
+.item-offer::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgb(84, 81, 247);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  transition: 0.8s;
+  z-index: -1;
+}
+
+.item-offer:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.inside-team {
+  float: left;
+}
+
+.inside-team-icon {
+  width: 15%;
+  height: 50px;
+}
+
+.inside-team-content {
+  width: 85%;
+  text-align: left;
+}
+
+.inside-team-icon i {
+  font-size: 35px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.inside-team-content h3 {
+  color: black;
+  font-size: 20px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.inside-team-content p {
+  color: rgb(56, 56, 56);
+  opacity: 0.5;
+  font-size: medium;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.item-offer:hover h3,
+.item-offer:hover p,
+.item-offer:hover i {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* End of Offers */
+
+.why-choose-us {
+  height: 700px;
+  margin-bottom: 150px;
+}
+
+.why-choose-us .container {
+  height: 100%;
+}
+
+.parent-why {
+  overflow: auto;
+  height: 100%;
+}
+
+.parent-why .why-choose {
+  position: relative;
+  float: left;
+  height: 100%;
+}
+
+.why-1 {
+  width: 60%;
+}
+
+.why-1-content {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+
+.why-2 {
+  width: 40%;
+}
+
+.why-2 img {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.why-choose h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.why-choose h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 115%;
+  width: 95px;
+  height: 4px;
+  background-color: blue;
+}
+
+.why-choose p {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 25px;
+}
+
+.why-choose p.smallHint {
+  opacity: 0.8;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.why-choose .fa-check {
+  color: blue;
+  margin-right: 5px;
+}
+
+.why-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.all-dots {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(124, 124, 255);
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.dot-1 {
+  background-color: blue;
+}
+
+.all-dots:hover {
+  background-color: rgb(186, 186, 255);
+}
+
+/* End of Why */
+
+.awards {
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/medals-honor-recognition.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.awards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.awards .container {
+  height: 100%;
+}
+
+.parent-awards {
+  overflow: auto;
+  height: 100%;
+}
+
+.award {
+  float: left;
+  width: 25%;
+  height: 100%;
+  color: #fff;
+  position: relative;
+}
+
+.award .award-content {
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.award .award-content i {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+/* End of Awards */
+
+.pricing-caption {
+  text-align: center;
+  color: black;
+
+  height: 200px;
+  font-size: 40px;
+
+  text-transform: capitalize;
+  line-height: 200px;
+
+  position: relative;
+}
+
+.pricing-caption::after {
+  background-color: rgb(54, 63, 199);
+  width: 150px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  z-index: -5;
+}
+
+.price-two {
+  margin: 0 2.5%;
+}
+
+.price-one {
+  margin-left: 10%;
+}
+
+.welcome-prices {
+  overflow: auto;
+  text-align: center;
+}
+
+.welcome-prices .item-price {
+  position: relative;
+  overflow: hidden;
+
+  float: left;
+  width: 25%;
+  height: 400px;
+  border-radius: 10px;
+  border: 1px solid rgb(113, 24, 255);
+}
+
+.item-price .con-price {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.con-price h3 {
+  width: 200px;
+  margin: auto;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.circle-con {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+
+  background-color: rgb(116, 141, 255);
+  border-radius: 50%;
+  margin: auto;
+}
+
+.circle-con h4 {
+  font-size: 30px;
+
+  position: absolute;
+
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.circle-con h5 {
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 20px;
+
+  position: absolute;
+
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+
+.con-price h4.feature {
+  width: 270px;
+  font-size: 17px;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+.btnPrice {
+  width: 100px;
+  height: 40px;
+  margin-top: 15px;
+  background-color: rgb(108, 108, 255);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btnPrice:hover {
+  background-color: blue;
+}
+
+.con-price .fa-check {
+  color: green;
+}
+
+.con-price .fa-xmark {
+  color: red;
+}
+.welcome-prices .item-price::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: rgba(54, 63, 199, 0.3);
+  transition: 0.5s;
+}
+
+.welcome-prices .item-price:hover::before {
+  height: 100%;
+}
+
+.welcome-prices .item-price:hover {
+  color: #fff;
+}
+
+/* End of Prices */
+
+.articles {
+  margin-top: 150px;
+
+  background-image: url("../images/24245585_freepik_5_23_12_21_9.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.articles .container {
+  height: 100%;
+}
+
+.parent-articles {
+  overflow: auto;
+  height: 100%;
+  position: relative;
+}
+
+.parent-articles .article {
+  float: left;
+  width: 45%;
+}
+
+.image-content {
+  position: relative;
+}
+
+.inside-content-image {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: 20px;
+}
+
+.inside-content-image h3 {
+  font-size: 27px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.inside-content-image p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.parent-articles .article-1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  margin-right: 5%;
+}
+
+.parent-articles .article-2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  margin-left: 5%;
+}
+
+.image-content img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.article .outer-para-article {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* End of Articles */
+
+.members-caption {
+  text-align: center;
+  color: black;
+
+  height: 200px;
+  font-size: 40px;
+
+  text-transform: capitalize;
+  line-height: 200px;
+
+  position: relative;
+}
+
+.members-caption::after {
+  background-color: rgb(54, 63, 199);
+  width: 150px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  /* z-index: -5; */
+}
+
+.parent-members {
+  overflow: auto;
+}
+
+.member-info {
+  float: left;
+  position: relative;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  background-color: rgb(209, 209, 209);
+}
+
+.member-two {
+  margin: 0 5%;
+}
+
+.member-image {
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  z-index: 3; /* to make the image and icons before or after the overlay */
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.member-icons {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-color: black;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.member-info:hover .member-icons {
+  opacity: 0.7;
+}
+
+.member-icons a {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(25, 212, 245);
+  color: #fff;
+  display: block;
+  margin-left: auto;
+}
+
+.member-icons a i {
+  line-height: 45px;
+  font-size: 20px;
+}
+
+.member-info-name {
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+
+.member-info-job {
+  text-transform: capitalize;
+  color: #585858;
+  font-weight: bold;
+}
+
+.member-info:hover .member-info-job {
+  color: blue;
+}
+
+.member-info:hover .member-info-name {
+  color: #fff;
+}
+
+.inside-member-info {
+  position: relative;
+  z-index: 2;
+}
+
+.member-info::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: 3; /* to make the blue bg before or after the image*/
+  background-color: rgb(70, 119, 253);
+  opacity: 1;
+}
+
+.member-info:hover::before {
+  height: 100%;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+/* End of Members */
+
+.cards-caption {
+  text-align: center;
+  color: black;
+
+  height: 200px;
+  font-size: 40px;
+
+  text-transform: capitalize;
+  line-height: 200px;
+
+  position: relative;
+}
+
+.cards-caption::after {
+  background-color: rgb(54, 63, 199);
+  width: 150px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  /* z-index: -5; */
+}
+
+.parent-cards {
+  overflow: auto;
+}
+
+.card {
+  position: relative;
+  float: left;
+  width: 30%;
+  border: 1.5px solid blue;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 255, 0.3);
+  transition: 0.5s;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.c-2 {
+  margin: 0 5%;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card-content h3,
+.card-content p {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.card:hover .card-content h3,
+.card:hover .card-content p {
+  color: white;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.card-button {
+  padding: 10px 25px;
+  background-color: #0056ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-button:hover {
+  background-color: #003bb5;
+}
+
+.card-bar {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.card-bar-part {
+  float: left;
+  width: 30%;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.c-parcenter {
+  text-align: center;
+  margin: 0 5%;
+}
+
+.card-bar-part i {
+  color: #0056ff;
+  font-size: 16px;
+}
+
+.card:hover .card-bar-part {
+  color: white;
+}
+
+.card:hover .card-bar-part i {
+  color: white;
+  cursor: pointer;
+}
+
+/* End of Cards */
+
+.footer {
+  margin-top: 150px;
+  background-color: rgb(37, 99, 235, 0.6);
+}
+
+.footer img {
+  width: 250px;
+  height: 200px;
+}
+
+.parentFooter {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.icn {
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 2.5px;
+  background-color: blue;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icn:hover {
+  background-color: #0056ff;
+}
+
+.footerIcons {
+  margin-bottom: 15px;
+}
+
+.rightFooter {
+  text-transform: capitalize;
+  font-size: 18px;
+}
